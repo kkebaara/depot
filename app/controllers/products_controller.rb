@@ -1,11 +1,3 @@
-#---
-# Excerpted from "Agile Web Development with Rails 6",
-# published by The Pragmatic Bookshelf.
-# Copyrights apply to this code. It may not be used to create training material,
-# courses, books, articles, and the like. Contact us if you are in doubt.
-# We make no guarantees that this code is fit for any purpose.
-# Visit http://www.pragmaticprogrammer.com/titles/rails6 for more book information.
-#---
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
@@ -76,6 +68,16 @@ class ProductsController < ApplicationController
       format.html { redirect_to products_url,
           notice: 'Product was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+  def who_bought
+    @product = Product.find(params[:id])
+    @latest_order = @product.orders.order(:updated_at).last
+    if stale?(@latest_order)
+      respond_to do |format|
+        format.atom
+      end
     end
   end
 
