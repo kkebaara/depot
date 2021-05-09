@@ -1,29 +1,4 @@
-<<<<<<< HEAD
-# depot
-Project from Agile Development with Rails (6)
-=======
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Project from Agile Development with Rails 6
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
->>>>>>> 055e52a5bff126259b4ef517db95ade3b3fc85b3
+Decided to re-read the Agile Development with Rails 6 book to catch up on anything that I may have missed or learn something new while working on the Depot app
